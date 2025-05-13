@@ -36,7 +36,7 @@ if __name__ == "__main__":
         rf.fit(X_train, y_train)
 
         # Log parameters
-        mlflow.log_params({"max_depth": 2, "n_estimators": 5, "random_state": 1993})
+        mlflow.log_params({"max_depth": max_depth, "n_estimators": n_estimators, "random_state": 1993})
 
         # Menyimpan model dalam file lokal
         mlflow.sklearn.save_model(rf, "model_local_path")
